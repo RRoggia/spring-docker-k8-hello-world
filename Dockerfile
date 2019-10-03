@@ -1,4 +1,3 @@
-FROM sapmachine:11.0.4 AS jdk11
 FROM maven 
 COPY ./ /usr/src/docker-hello-world
 WORKDIR /usr/src/docker-hello-world
