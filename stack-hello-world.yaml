@@ -1,0 +1,7 @@
+version: '3.7'    
+
+services:
+  hello-world-app:
+    image: rroggia/spring-docker-hello-world:1.0
+    ports:
+      - "8000:8080"   
