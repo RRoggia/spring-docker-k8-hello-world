@@ -4,18 +4,8 @@ global:
       monitor: 'local-monitor'
 
 scrape_configs:
-
-   -   job_name: 'hello-world-java'
-       metrics_path: '/app-metrics/'
-       static_configs:
-          - targets: ['localhost:8080']
-
-   -   job_name: 'tomcat-java'
-       metrics_path: '/metrics/'
-       static_configs:
-          - targets: ['localhost:8080']
-          
-   -   job_name: 'spring'
+         
+   -   job_name: 'microservice-name'
        metrics_path: '/actuator/prometheus'
        static_configs:
-          - targets: ['localhost:8080']
+          - targets: ['microservice-name:8080']
