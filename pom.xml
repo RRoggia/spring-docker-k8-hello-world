@@ -12,6 +12,18 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.1.8.RELEASE</version>
 		</dependency>
+		
+		<!-- metrics with prometheus -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>2.1.8.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<version>1.3.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
