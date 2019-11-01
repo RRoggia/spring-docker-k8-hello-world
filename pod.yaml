@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: spring-docker-k8-hello-world
+  labels:
+    zone: dev
+spec: 
+  containers:
+  - name: microservice-name
+    image: rroggia/spring-docker-hello-world:1.1
+    ports: 
+    - containerPort: 8080 
