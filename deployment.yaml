@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: spring-docker-k8-hello-world-deploy
+  labels: 
+    app: hello-world
+spec:
+  replicas: 3
+  minReadySeconds: 10
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: spring-docker-k8-hello-world
+  template:
+    metadata:
+      labels:
+        app: spring-docker-k8-hello-world
+    spec: 
+      containers:
+      - name: spring-docker-k8-hello-world
+        image: rroggia/spring-docker-hello-world:1.1
+        ports:
+        -  containerPort: 8080
