@@ -6,10 +6,9 @@ metadata:
     app: hello-world
 spec:
   replicas: 3
-  minReadySeconds: 10
   strategy:
     rollingUpdate:
-      maxSurge: 2
+      maxSurge: 1
       maxUnavailable: 1
   selector:
     matchLabels:
